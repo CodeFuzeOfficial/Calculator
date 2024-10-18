@@ -1,0 +1,97 @@
+body {
+  background-color: #f0f0f0; /* Light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of viewport */
+  font-family: 'Helvetica Neue', sans-serif; /* iOS-like font */
+}
+
+.calculator {
+  width: 320px; /* Width of the calculator */
+  background-color: #ffffff; /* White background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow: hidden; /* Clip corners */
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 70px; /* Height of the screen */
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center; /* Right-align text */
+  padding: 10px; /* Padding for top/bottom and left/right */
+  border: none; /* No border */
+  font-size: 2.5em; /* Large font size */
+  border-top-left-radius: 20px; /* Rounded corners at the top */
+  border-top-right-radius: 20px; /* Rounded corners at the top */
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3); /* Inner shadow for the screen */
+  opacity: 0.8; /* Optional: slightly transparent */
+}
+
+.calculator-keys {
+  display: grid; /* Grid layout for keys */
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 10px; /* Space between keys */
+  padding: 20px; /* Padding around keys */
+}
+
+/* Common styles for all keys */
+.key {
+  background-color: #f0f0f0; /* Light key background */
+  color: #000; /* Black text */
+  padding: 20px; /* Padding for keys */
+  font-size: 1.5em; /* Font size for keys */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.2s, transform 0.1s; /* Smooth transition */
+  display: flex; /* Flex for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 60px; /* Fixed height for uniformity */
+}
+
+/* Specific styles for different buttons */
+.key:nth-child(1) { /* C button */
+  background-color: #ff9500; /* Orange color for function keys */
+  color: white; /* White text */
+}
+
+.key:nth-child(2) { /* DEL button */
+  background-color: #ff9500; /* Orange color for function keys */
+  color: white; /* White text */
+}
+
+.key.operator-key {
+  background-color: #007aff; /* Blue color for operator keys */
+  color: white; /* White text */
+}
+
+.key.operator-key:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+
+.key.equal-key {
+  grid-column: span 2; /* Span two columns */
+  background-color: #28cd41; /* Green color for equal key */
+  color: white; /* White text */
+}
+
+.key.equal-key:hover {
+  background-color: #24a32b; /* Darker green on hover */
+}
+
+.key.zero-key {
+  grid-column: span 2; /* Span two columns */
+}
+
+/* Add hover effects */
+.key:hover {
+  background-color: #ddd; /* Darker on hover */
+}
+
+.key:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
