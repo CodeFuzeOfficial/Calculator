@@ -7,33 +7,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" class="calculator-screen" id="screen" disabled placeholder="0"/>
-    <div class="calculator-keys">
-      <button class="key" onclick="clearScreen()">C</button>
-      <button class="key" onclick="deleteChar()">DEL</button>
-      <button class="key operator-key" onclick="appendOperator('/')">/</button>
-      <button class="key operator-key" onclick="appendOperator('*')">*</button>
+  <div class="calculator-container">
+    <div class="calculator">
+      <input type="text" class="calculator-screen" id="screen" disabled placeholder="0"/>
+      <div class="calculator-keys">
+        <button class="key" onclick="clearScreen()">C</button>
+        <button class="key" onclick="deleteChar()">DEL</button>
+        <button class="key operator-key" onclick="appendOperator('/')">/</button>
+        <button class="key operator-key" onclick="appendOperator('*')">*</button>
 
-      <button class="key" onclick="appendNumber('7')">7</button>
-      <button class="key" onclick="appendNumber('8')">8</button>
-      <button class="key" onclick="appendNumber('9')">9</button>
-      <button class="key operator-key" onclick="appendOperator('-')">-</button>
+        <button class="key" onclick="appendNumber('7')">7</button>
+        <button class="key" onclick="appendNumber('8')">8</button>
+        <button class="key" onclick="appendNumber('9')">9</button>
+        <button class="key operator-key" onclick="appendOperator('-')">-</button>
 
-      <button class="key" onclick="appendNumber('4')">4</button>
-      <button class="key" onclick="appendNumber('5')">5</button>
-      <button class="key" onclick="appendNumber('6')">6</button>
-      <button class="key operator-key" onclick="appendOperator('+')">+</button>
+        <button class="key" onclick="appendNumber('4')">4</button>
+        <button class="key" onclick="appendNumber('5')">5</button>
+        <button class="key" onclick="appendNumber('6')">6</button>
+        <button class="key operator-key" onclick="appendOperator('+')">+</button>
 
-      <button class="key" onclick="appendNumber('1')">1</button>
-      <button class="key" onclick="appendNumber('2')">2</button>
-      <button class="key" onclick="appendNumber('3')">3</button>
-      <button class="key zero-key" onclick="appendNumber('0')">0</button>
+        <button class="key" onclick="appendNumber('1')">1</button>
+        <button class="key" onclick="appendNumber('2')">2</button>
+        <button class="key" onclick="appendNumber('3')">3</button>
+        <button class="key zero-key" onclick="appendNumber('0')">0</button>
 
-      <button class="key equal-key" onclick="calculate()">=</button>
-      <button class="key" onclick="appendNumber('.')">.</button>
+        <button class="key equal-key" onclick="calculate()">=</button>
+        <button class="key" onclick="appendNumber('.')">.</button>
+      </div>
     </div>
+    
+    <footer class="calculator-footer">
+      <p>Developed by <span><a href="https://github.com/CodeFuzeOfficial" target="_blank">CodeFuze - Official</a></span></p>
+    </footer>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
